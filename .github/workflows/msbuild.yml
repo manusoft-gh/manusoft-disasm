@@ -31,6 +31,7 @@ jobs:
       with:
         repository: manusoft-gh/manusoft-winpatch
         token: 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
+        path: manusoft-disasm/manusoft-winpatch
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
