@@ -25,15 +25,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        path: manusoft-disasm
 
     - name: Checkout manusoft-winpatch
       uses: actions/checkout@v3
       with:
         repository: manusoft-gh/manusoft-winpatch
         token: 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
-        path: manusoft-winpatch
+        path: ../manusoft-winpatch
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
