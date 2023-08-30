@@ -1,0 +1,49 @@
+name: MSBuild
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  SOLUTION_FILE_PATH: manusoft-disasm/testapp/TestDisAsm.sln
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        config: [Debug, Release]
+        arch: [x86, x64]
+    runs-on: windows-latest
+
+    env:
+      BUILD_CONFIGURATION: ${{ matrix.config }}
+      BUILD_ARCHITECTURE: ${{ matrix.arch }}
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        path: manusoft-disasm
+
+    - name: Checkout manusoft-winpatch
+      uses: actions/checkout@v3
+      with:
+        repository: manusoft-gh/manusoft-winpatch
+        token: ${{ secrets.private_repo_token }}
+        path: manusoft-winpatch
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Restore NuGet packages
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: nuget restore ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=${{env.BUILD_ARCHITECTURE}} ${{env.SOLUTION_FILE_PATH}}
