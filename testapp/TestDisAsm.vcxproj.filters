@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WinPatch">
+      <UniqueIdentifier>{66721c68-dd60-42b3-8b23-1a3b626fd28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DisAsm">
+      <UniqueIdentifier>{347f8e2a-d74e-4a14-ae00-fe51300e16da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestDisAsm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpCodeTables.cpp">
+      <Filter>DisAsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CreateInstruction.cpp">
+      <Filter>DisAsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DisAsm.cpp">
+      <Filter>DisAsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\Patch.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\PeImage.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\PeUtility.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\PeVersion.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\ThunkHeap.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\AsmHook.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\ExportedFunctionHook.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\ImportedFunctionHook.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\manusoft-winpatch\MemIO.cpp">
+      <Filter>WinPatch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\OpCodeTables.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Stream.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CreateInstruction.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DisAsm.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DisAsmHook.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InstructionSequence.h">
+      <Filter>DisAsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\OneShotFunctor.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\Patch.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\PeImage.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\PeUtility.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\PeVersion.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\ThunkHeap.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\WndProcHook.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\ActCtx.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\Asm.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\AsmHook.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\CodeHeap.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\ExportedFunctionHook.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\FunctionTableHook.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\ImportedFunctionHook.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\manusoft-winpatch\MemIO.h">
+      <Filter>WinPatch</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\manusoft-winpatch\RegSave.x64.asm">
+      <Filter>WinPatch</Filter>
+    </MASM>
+    <MASM Include="..\..\manusoft-winpatch\RegSave.asm">
+      <Filter>WinPatch</Filter>
+    </MASM>
+    <MASM Include="..\..\manusoft-winpatch\HookStub.asm">
+      <Filter>WinPatch</Filter>
+    </MASM>
+    <MASM Include="..\..\manusoft-winpatch\HookStub.x64.asm">
+      <Filter>WinPatch</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
