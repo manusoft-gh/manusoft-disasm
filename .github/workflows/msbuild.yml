@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 env:
   SOLUTION_FILE_PATH: manusoft-disasm/testapp/TestDisAsm.sln
@@ -26,19 +27,18 @@ jobs:
       BUILD_ARCHITECTURE: ${{ matrix.arch }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v5
       with:
         path: manusoft-disasm
 
     - name: Checkout manusoft-winpatch
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
       with:
         repository: manusoft-gh/manusoft-winpatch
-        token: ${{ secrets.private_repo_token }}
         path: manusoft-winpatch
 
     - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v3
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
